@@ -1,12 +1,16 @@
 
+import Footer from '../components/Footer';
 import Nav from '../navbar/Nav';
 import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className='flex flex-col'>
             <Nav></Nav>
-            <Outlet></Outlet>
+            <div className='min-h-[calc(100vh-112px)]'>
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
